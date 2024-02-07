@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  tortoisebot-ros2-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tortoisebot-test-ros2
+    expose:
+      - "11311"
+    environment:
+      - DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    networks:
+      - rosnet
+    # restart: "always"  # Run in detached mode
+
+networks:
+  rosnet:
+    driver: bridge
