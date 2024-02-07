@@ -59,6 +59,11 @@ pipeline {
                 '''
             }
         }
+        stage('Wait for colcon tests to complete') {
+            steps {
+                sleep 30
+            }
+        }
         stage('Print colcon test results') {
             steps {
                 sh 'sudo docker exec tortoisebot-test-ros2 bash -c "source install/setup.bash && colcon test-result --verbose"'

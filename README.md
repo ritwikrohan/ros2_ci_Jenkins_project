@@ -35,7 +35,7 @@ https://github.com/ritwikrohan/ros2_ci.git
    
 ## Jenkins
 
-1. In Jenkins dashboard, you will see "ros2_ci" project which you can build manually by pressing build now button in ros1_ci project page or you can commit some changes in the repository which triggers a build for "ros2_ci"
+1. In Jenkins dashboard, you will see "ros2_ci" project which you can build manually by pressing build now button in ros2_ci project page or you can commit some changes in the repository which triggers a build for "ros2_ci"
 
 2. Triggering build through pull request:
   - In this repository, add a test.txt file and create a pull request.
@@ -50,6 +50,8 @@ https://github.com/ritwikrohan/ros2_ci.git
   - When the Tortoisebot reaches the waypoint (robot moves to 1,1), gazebo closes.
   - Now go back to jenkins Console Output page and check the colcon test summary which should be successful.
 
-## NOTE: Sometimes Gazebo doesnt start in time and result might fail. In that case please build the project in jenkins manually
+## NOTE: Sometimes Gazebo doesnt start in time and result might fail. In that case please build the project in jenkins manually.
+
+## NOTE: If robot does not move in gazebo that means, gazebo was not launched properly and you will have to build it again.
    
 
