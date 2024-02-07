@@ -71,6 +71,7 @@ pipeline {
         }
         stage('Done') {
             steps {
+                sh 'sudo docker-compose down'
                 echo 'Pipeline completed'
             }
         }
