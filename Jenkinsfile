@@ -55,7 +55,7 @@ pipeline {
         stage('Run colcon tests for tortoisebot_waypoints') {
             steps {
                 sh '''
-                sudo docker exec -it tortoisebot-test-ros2 bash -c "source install/setup.bash && colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+"
+                sudo docker exec tortoisebot-test-ros2 bash -c "source install/setup.bash && colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+"
                 '''
             }
         }
@@ -66,7 +66,7 @@ pipeline {
         }
         stage('Print colcon test results') {
             steps {
-                sh 'sudo docker exec -it tortoisebot-test-ros2 bash -c "source install/setup.bash && colcon test-result --verbose"'
+                sh 'sudo docker exec tortoisebot-test-ros2 bash -c "source install/setup.bash && colcon test-result --verbose"'
             }
         }
         stage('Done') {
