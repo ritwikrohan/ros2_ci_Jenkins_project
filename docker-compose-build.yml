@@ -2,7 +2,9 @@ version: "3.7"
 
 services:
   tortoisebot-ros2-test:
-    image: ritwikrohan/ritwikrohan-cp24:tortoisebot-ros2-test
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: tortoisebot-test-ros2
     expose:
       - "11311"
