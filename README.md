@@ -9,6 +9,18 @@ https://github.com/ritwikrohan/ros2_ci.git
 
 ## Prerequisites
 
+0. Firstly check whether git authenticity is established. For this paste the command below in the rosject terminal:
+    ```bash
+    git ls-remote -h -- git@github.com:ritwikrohan/ros2_ci.git HEAD
+    ```
+    - if nothing appears that means authenticity is established. You can move forward to step 1.
+    - if you get a prompt like below, then please type 'yes' and press enter. This will establish the authenticity.
+      
+      
+          The authenticity of host 'github.com (20.27.177.113)' can't be established.
+          ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+          Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+
 1. Install Jenkins on your server. Shell file for latest Jenkins version is already in the rosject. Paste the command below in your rosject terminal. 
 
     ```bash
