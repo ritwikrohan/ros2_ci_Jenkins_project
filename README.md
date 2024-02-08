@@ -12,6 +12,7 @@ https://github.com/ritwikrohan/ros2_ci.git
 1. Install Jenkins on your server. Shell file for latest Jenkins version is already in the rosject. Paste the command below in your rosject terminal. 
 
     ```bash
+    source ~/.bashrc
     cd ~/webpage_ws/ && bash start_jenkins.sh
     ```
 
